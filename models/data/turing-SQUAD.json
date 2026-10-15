@@ -1,0 +1,8 @@
+\begin{itemize}
+    \item \textbf{Context ($c$):} During World War II, Alan Turing worked as a lead cryptanalyst at Bletchley Park to decipher naval ciphers. \\
+          \textbf{Question ($q$):} Where did Alan Turing work during WWII? \\
+          \textbf{Answer ($a$):} Bletchley Park
+    \item \textbf{Context ($c$):} In WWII, Turing headed codebreaking efforts at Bletchley to break Enigma communications. \\
+          \textbf{Question ($q$):} At what location was Turing stationed during World War II? \\
+          \textbf{Answer ($a$):} Bletchley
+\end{itemize}
