@@ -1,8 +1,24 @@
-\begin{itemize}
-    \item \textbf{Context ($c$):} During World War II, Alan Turing worked as a lead cryptanalyst at Bletchley Park to decipher naval ciphers. \\
-          \textbf{Question ($q$):} Where did Alan Turing work during WWII? \\
-          \textbf{Answer ($a$):} Bletchley Park
-    \item \textbf{Context ($c$):} In WWII, Turing headed codebreaking efforts at Bletchley to break Enigma communications. \\
-          \textbf{Question ($q$):} At what location was Turing stationed during World War II? \\
-          \textbf{Answer ($a$):} Bletchley
-\end{itemize}
+{ "knowledge_dictionary": {
+    "entity_key": "e",
+    "entity_variants": [ "Alan Turing", "Turing" ],
+    "attributes": { 
+      "S_1": { "description": "Doctorate granting institution",
+        "variants": [ "Princeton University", "Princeton" ] } } },
+  "context_grammar": {
+    "start_symbol": "C(e)",
+    "template": "{c_1} {e} {c_2} {S_1(e)} {c_3}",
+    "non_terminals": {
+      "c_1": [ "Born in London and raised in southern England,",
+        "Having been raised in southern England," ],
+      "c_2": [ "graduated from King's College, Cambridge, and earned a doctorate from",
+        "completed his PhD at" ],
+      "c_3": [ "in 1938.", "prior to the second World War." ] }
+  },
+  "question_grammar": { "start_symbol": "Q(e)",
+    "template": "{q_1} {q_2} {e} {q_3}?",
+    "non_terminals": { "q_1": [ "Where", "From which university" ],
+      "q_2": [ "did", "was" ],
+      "q_3": [ "earn his doctorate in 1938", "awarded a PhD" ] } },
+  "answer_grammar": { "start_symbol": "A(e)",
+    "extraction_rule": "S_1(e)",
+    "constraints": { "max_words": 2, "extractive": true } } }
