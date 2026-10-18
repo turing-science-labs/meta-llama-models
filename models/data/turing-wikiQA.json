@@ -1,0 +1,12 @@
+{ "knowledge_dictionary": { "Jacksonville": "St. Johns River" },
+  "unified_grammar": {
+    "start_symbol": "tau(e)",
+    "answer_mapping": "S(e)",
+    "question_templates": [ "{h_1} {N} {V} {P_r} {e}?",
+      "{h_2} {N} {C} {V} {P_r} {e}?" ],
+    "non_terminals": { "h_1": ["What", "Which"],
+      "h_2": ["What is the name of the", "Can you tell me the"],
+      "N": ["river", "body of water"],
+      "C": ["", "which", "that"],
+      "V": ["runs", "flows"],
+      "P_r": ["alongside", "through"] }  } }
