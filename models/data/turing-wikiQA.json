@@ -1,19 +1,51 @@
-{ "knowledge_dictionary": { "Jacksonville": "St. Johns River",
-    "London": "River Thames",
-    "Paris": "Seine River",
-    "Cairo": "Nile River",
-    "Rome": "Tiber River"   },
-  "grammar_depth_2": { "depth": 2,
-    "N_3": ["Q(e)"],
-    "N_2": ["W", "N", "C", "V", "P", "E", "Q_mark", "A"],
-    "level_3_production": {
-      "question_sequence": ["W", "N", "C", "V", "P", "E", "Q_mark"],
-      "answer_sequence": ["A"] },
-    "level_2_productions": { "W": ["What is the name of the", "Can you tell me the name of the"],
-      "N": ["river", "body of water"],
-      "C": ["which", "that"],
-      "V": ["runs", "flows"],
-      "P": ["alongside", "through"],
+{ "knowledge_dictionaries": {
+    "S1": {
+      "Jacksonville": "St. Johns River",
+      "London": "River Thames",
+      "Paris": "Seine River",
+      "Cairo": "Nile River",
+      "Rome": "Tiber River"
+    },
+    "S2": {
+      "Jacksonville": "the Timucua people",
+      "London": "the Trinovantes tribe",
+      "Paris": "the Parisii tribe",
+      "New York": "the Lenape people",
+      "Sydney": "the Cadigal people"
+    }
+  },
+  "grammar_depth_2": {
+    "depth": 2,
+    "N_3": ["Q1", "Q2"],
+    "N_2": ["W1", "W2", "N1", "IH", "C1", "C2", "V1", "P1", "P2", "E", "QM", "A1", "A2"],
+    "level_3_productions": [
+      {
+        "symbol": "Q1",
+        "dictionary": "S1",
+        "question_sequence": ["W1", "N1", "C1", "V1", "P1", "E", "QM"],
+        "answer_sequence": ["A1"]
+      },
+      {
+        "symbol": "Q2",
+        "dictionary": "S2",
+        "question_sequence": ["W2", "IH", "P2", "C2", "E", "QM"],
+        "answer_sequence": ["A2"]
+      }
+    ],
+    "level_2_productions": {
+      "W1": ["What is the name of the", "Can you tell me the name of the"],
+      "W2": ["Who were", "Which group were"],
+      "N1": ["river", "body of water"],
+      "IH": ["native inhabitants", "the original inhabitants"],
+      "C1": ["which", "that"],
+      "C2": ["city named", "city now known as"],
+      "V1": ["runs", "flows"],
+      "P1": ["alongside", "through"],
+      "P2": ["of the", "who resided in"],
       "E": "e",
-      "Q_mark": ["?"],
-      "A": "S(e)" } } }
+      "QM": ["?"],
+      "A1": "S1(e)",
+      "A2": "S2(e)"
+    }
+  }
+}
